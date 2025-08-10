@@ -8,10 +8,24 @@ function App() {
   const [menu, setMenu] = useState({ entrees: [], mains: [], drinks: [] });
   const [search, setSearch] = useState("");
   const [order, setOrder] = useState(() => {
-    // Load from localStorage if exists
-    const saved = localStorage.getItem("restaurantOrder");
-    return saved ? JSON.parse(saved) : [];
-  });
+  const saved = localStorage.getItem("restaurantOrder");
+  if (!saved) return [];
+
+  try {
+    const parsed = JSON.parse(saved);
+
+    // Normalize: ensure notes and orderId exist for each item
+    return parsed.map(item => ({
+      ...item,
+      notes: item.notes || "",
+      orderId: item.orderId || (Date.now().toString() + Math.random().toString(36).slice(2))
+    }));
+  } catch (error) {
+    console.error("Failed to parse saved order from localStorage:", error);
+    return [];
+  }
+});
+
 
   useEffect(() => {
     fetch(process.env.PUBLIC_URL +"/menu.json")
@@ -25,9 +39,11 @@ function App() {
   }, [order]);
 
   const addToOrder = (item, category) => {
+  const newOrderId = Date.now().toString() + Math.random().toString(36).slice(2);
+  console.log("Adding item with orderId:", newOrderId);
   setOrder(prev => [
     ...prev,
-    { ...item, qty: 1, notes: "", category,  orderId: Date.now().toString() + Math.random().toString(36).slice(2)}
+    { ...item, qty: 1, notes: "", category,  orderId: newOrderId}
 
   ]);
 };
@@ -38,7 +54,8 @@ function App() {
   };
 
   const updateNotes = (orderId, notes) => {
-    setOrder(prev => prev.map(o => (o.orderID === orderId ? { ...o, notes } : o)));
+     console.log("Updating notes for orderId:", orderId, "to:", notes);
+    setOrder(prev => prev.map(o => (o.orderId === orderId ? { ...o, notes } : o)));
   };
 
   const clearOrder = () => {

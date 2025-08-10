@@ -11,7 +11,7 @@ export default function OrderSummary({ order, onQtyChange, onNotesChange, onClea
       <>
         <h3>{category}</h3>
         {categoryItems.map(item => (
-          <div key={item.id} className="order-item">
+          <div key={item.orderId} className="order-item">
             <span>{item.name}</span>
             <input
               type="number"
