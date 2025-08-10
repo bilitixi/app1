@@ -14,7 +14,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch("/menu.json")
+    fetch(process.env.PUBLIC_URL +"/menu.json")
       .then(res => res.json())
       .then(data => setMenu(data));
   }, []);
