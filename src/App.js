@@ -25,16 +25,12 @@ function App() {
   }, [order]);
 
   const addToOrder = (item, category) => {
-    setOrder(prev => {
-      const existing = prev.find(o => o.id === item.id);
-      if (existing) {
-        return prev.map(o =>
-          o.id === item.id ? { ...o, qty: o.qty + 1 } : o
-        );
-      }
-      return [...prev, { ...item, qty: 1, notes: "", category }];
-    });
-  };
+  setOrder(prev => [
+    ...prev,
+    { ...item, qty: 1, notes: "", category }
+  ]);
+};
+
 
   const updateQuantity = (id, qty) => {
     setOrder(prev => prev.map(o => (o.id === id ? { ...o, qty } : o)));
