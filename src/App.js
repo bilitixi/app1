@@ -1,23 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import SearchBar from "./components/SearchBar";
+import MenuList from "./components/MenuList";
+import OrderSummary from "./components/OrderSummary";
+import "./App.css";
 
 function App() {
+  const [menu, setMenu] = useState({ entrees: [], mains: [], drinks: [] });
+  const [search, setSearch] = useState("");
+  const [order, setOrder] = useState(() => {
+    // Load from localStorage if exists
+    const saved = localStorage.getItem("restaurantOrder");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    fetch("/menu.json")
+      .then(res => res.json())
+      .then(data => setMenu(data));
+  }, []);
+
+  useEffect(() => {
+    // Save to localStorage every time order changes
+    localStorage.setItem("restaurantOrder", JSON.stringify(order));
+  }, [order]);
+
+  const addToOrder = (item, category) => {
+    setOrder(prev => {
+      const existing = prev.find(o => o.id === item.id);
+      if (existing) {
+        return prev.map(o =>
+          o.id === item.id ? { ...o, qty: o.qty + 1 } : o
+        );
+      }
+      return [...prev, { ...item, qty: 1, notes: "", category }];
+    });
+  };
+
+  const updateQuantity = (id, qty) => {
+    setOrder(prev => prev.map(o => (o.id === id ? { ...o, qty } : o)));
+  };
+
+  const updateNotes = (id, notes) => {
+    setOrder(prev => prev.map(o => (o.id === id ? { ...o, notes } : o)));
+  };
+
+  const clearOrder = () => {
+    setOrder([]);
+    localStorage.removeItem("restaurantOrder");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>Restaurant Order</h1>
+      <SearchBar value={search} onChange={setSearch} />
+      <MenuList
+        menu={menu}
+        search={search}
+        onAdd={addToOrder}
+      />
+      <OrderSummary
+        order={order}
+        onQtyChange={updateQuantity}
+        onNotesChange={updateNotes}
+        onClear={clearOrder}
+      />
     </div>
   );
 }
