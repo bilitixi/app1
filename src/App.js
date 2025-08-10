@@ -27,17 +27,18 @@ function App() {
   const addToOrder = (item, category) => {
   setOrder(prev => [
     ...prev,
-    { ...item, qty: 1, notes: "", category }
+    { ...item, qty: 1, notes: "", category,  orderId: Date.now().toString() + Math.random().toString(36).slice(2)}
+
   ]);
 };
 
 
-  const updateQuantity = (id, qty) => {
-    setOrder(prev => prev.map(o => (o.id === id ? { ...o, qty } : o)));
+  const updateQuantity = (orderId, qty) => {
+    setOrder(prev => prev.map(o => (o.orderId === orderId ? { ...o, qty } : o)));
   };
 
-  const updateNotes = (id, notes) => {
-    setOrder(prev => prev.map(o => (o.id === id ? { ...o, notes } : o)));
+  const updateNotes = (orderId, notes) => {
+    setOrder(prev => prev.map(o => (o.orderID === orderId ? { ...o, notes } : o)));
   };
 
   const clearOrder = () => {

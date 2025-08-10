@@ -17,14 +17,14 @@ export default function OrderSummary({ order, onQtyChange, onNotesChange, onClea
               type="number"
               value={item.qty}
               min="1"
-              onChange={(e) => onQtyChange(item.id, parseInt(e.target.value))}
+              onChange={(e) => onQtyChange(item.orderId, parseInt(e.target.value))}
               style={{ width: "50px" }}
             />
             <input
               type="text"
               placeholder="Notes"
               value={item.notes}
-              onChange={(e) => onNotesChange(item.id, e.target.value)}
+              onChange={(e) => onNotesChange(item.orderId, e.target.value)}
               style={{ marginLeft: "8px", flex: 1 }}
             />
           </div>
