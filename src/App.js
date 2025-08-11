@@ -5,7 +5,7 @@ import OrderSummary from "./components/OrderSummary";
 import "./App.css";
 
 function App() {
-  const [menu, setMenu] = useState({ entrees: [], mains: [], drinks: [] });
+  const [menu, setMenu] = useState({ entrees: [], mains: [], drinks: [], Add_More: [] });
   const [search, setSearch] = useState("");
   const [order, setOrder] = useState(() => {
     const saved = localStorage.getItem("restaurantOrder");

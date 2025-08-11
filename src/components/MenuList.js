@@ -31,6 +31,17 @@ export default function MenuList({ menu, search, onAdd }) {
           <button onClick={() => onAdd(item, "Drink")}>Add</button>
         </div>
       ))}
+      <h2>Add-More</h2>
+      {filterItems(menu.Add_More).map(item => (
+        <div key={item.id} className="menu-item">
+          <span>{item.name} - ${item.price.toFixed(2)}</span>
+          <button onClick={() => onAdd(item, "Add_More")}>Add</button>
+        </div>
+      ))}
+
+
+
+
     </div>
   );
 }
