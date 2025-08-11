@@ -65,7 +65,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Restaurant Order</h1>
+      <h1 id = "name">Sen</h1>
+      <h2>Order's notes</h2>
 
       {/* New menu selector */}
       <label htmlFor="menuSelect">Select Menu: </label>
