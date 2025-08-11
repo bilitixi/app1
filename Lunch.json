@@ -67,9 +67,14 @@
     { "id": 60, "name": "Delegats Reserve Merlot 16 (Hawke’s Bay)", "price": 12 },
     { "id": 61, "name": "Squawking Magpie The Chatterer Syrah 20", "price": 15.5 },
     { "id": 62, "name": "Coriole Redstone Shiraz 16 (Australia)", "price": 14 },
-    { "id": 63, "name": "La Valentina Montepulciano Spelt 2013 (Italy)", "price": 99 }
+    { "id": 63, "name": "La Valentina Montepulciano Spelt 2013 (Italy)", "price": 99 }],
+    "Add_More":[
+      {"id": 100, "name": "Add custom item", "price": 0}
 
-  ]
+    ]
+
+
+  
 }
 
   
