@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function OrderSummary({ order, onQtyChange, onNotesChange, onClear }) {
+export default function OrderSummary({ order, onQtyChange, onNotesChange, onClear, onRemove }) {
   const total = order.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   const renderCategory = (category) => {
@@ -20,13 +20,14 @@ export default function OrderSummary({ order, onQtyChange, onNotesChange, onClea
               onChange={(e) => onQtyChange(item.orderId, parseInt(e.target.value))}
               style={{ width: "50px" }}
             />
-            <input
+            <textarea
               type="text"
               placeholder="Notes"
               value={item.notes}
               onChange={(e) => onNotesChange(item.orderId, e.target.value)}
               style={{ marginLeft: "8px", flex: 1 }}
             />
+             <button onClick={() => onRemove(item.orderId)}>❌ Remove</button>
           </div>
         ))}
       </>

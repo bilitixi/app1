@@ -41,6 +41,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem("restaurantOrder", JSON.stringify(order));
   }, [order]);
+  const removeFromOrder = (orderId) => {
+  setOrder(prev => prev.filter(o => o.orderId !== orderId));
+};
+
 
   const addToOrder = (item, category) => {
     const newOrderId = Date.now().toString() + Math.random().toString(36).slice(2);
@@ -88,6 +92,7 @@ function App() {
         onQtyChange={updateQuantity}
         onNotesChange={updateNotes}
         onClear={clearOrder}
+        onRemove={removeFromOrder}
       />
     </div>
   );

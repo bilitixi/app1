@@ -46,3 +46,17 @@ button:hover {
     margin-top: 4px;
   }
 }
+.order-item button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.order-item button:hover {
+  background-color: darkred;
+}
+
