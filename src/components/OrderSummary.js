@@ -43,6 +43,7 @@ export default function OrderSummary({ order, onQtyChange, onNotesChange, onClea
           {renderCategory("Entrée")}
           {renderCategory("Main")}
           {renderCategory("Drink")}
+          {renderCategory("Add_More")}
           <h3>Total: ${total.toFixed(2)}</h3>
           <button onClick={onClear}>Clear Order</button>
         </>
