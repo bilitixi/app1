@@ -85,15 +85,16 @@ function App() {
         {/* Add more options as needed */}
       </select>
 
-      <SearchBar value={search} onChange={setSearch} />
-      <MenuList menu={menu} search={search} onAdd={addToOrder} />
-      <OrderSummary
+       <OrderSummary
         order={order}
         onQtyChange={updateQuantity}
         onNotesChange={updateNotes}
         onClear={clearOrder}
         onRemove={removeFromOrder}
       />
+      <SearchBar value={search} onChange={setSearch} />
+      <MenuList menu={menu} search={search} onAdd={addToOrder} />
+      
     </div>
   );
 }
