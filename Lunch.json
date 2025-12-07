@@ -39,35 +39,80 @@
     { "id": 32, "name": "Mekong Breeze (Non-Alcoholic)", "price": 12 },
     { "id": 33, "name": "Hanoi Hipsters (Non-Alcoholic)", "price": 12 },
     { "id": 34, "name": "Beyond the Breakers (Non-Alcoholic)", "price": 12 },
-    { "id": 35, "name": "Nino Franco Prosecco NV (Italy) - Glass", "price": 17 },
-    { "id": 36, "name": "Nino Franco Prosecco NV (Italy) - Bottle", "price": 82 },
-    { "id": 37, "name": "Quartz Reef Brut NV (Central Otago)", "price": 98 },
-    { "id": 38, "name": "Taittinger Brut Reserve NV (France)", "price": 284 },
-    { "id": 39, "name": "Gerard Bertrand 6eme Sens - Glass", "price": 14.5 },
-    { "id": 40, "name": "Gerard Bertrand 6eme Sens - Bottle", "price": 68 },
-    { "id": 41, "name": "Soho Westwood Rose (Waiheke) - Glass", "price": 15 },
-    { "id": 42, "name": "Soho Westwood Rose (Waiheke) - Bottle", "price": 72 },
-    { "id": 43, "name": "SOHO ‘Stella’ Sauvignon Blanc 17 (Marlborough)", "price": 65 },
-    { "id": 44, "name": "Spy Valley Sauvignon Blanc 19 (Marlborough) - Glass", "price": 12.5 },
-    { "id": 45, "name": "Spy Valley Sauvignon Blanc 19 (Marlborough) - Bottle", "price": 60 },
-    { "id": 46, "name": "Astrolabe Sauvignon Blanc 17 (Marlborough) - Glass", "price": 16.5 },
-    { "id": 47, "name": "Astrolabe Sauvignon Blanc 17 (Marlborough) - Bottle", "price": 80 },
-    { "id": 48, "name": "Leeuwin Art Series Riesling Margaret River 21", "price": 15.5 },
-    { "id": 49, "name": "Framingham Classic Riesling 21", "price": 14.5 },
-    { "id": 50, "name": "Riff Pinot Grigio 16 (Italy)", "price": 13.5 },
-    { "id": 51, "name": "SOHO ‘Jagger’ Pinot Gris 17 (Marlborough)", "price": 14.5 },
-    { "id": 52, "name": "Tony Bish Fat n Sassy Chardonnay 20", "price": 14.5 },
-    { "id": 53, "name": "Astrolabe Chardonnay 18 (Marlborough)", "price": 17.5 },
-    { "id": 54, "name": "Craggy Range Gimblett Gravels Chardonnay 21", "price": 99 },
-    { "id": 55, "name": "Durvillea Marlborough Pinot Noir 20", "price": 14.5 },
-    { "id": 56, "name": "Summer House Pinot Noir 17 (Central Otago)", "price": 15 },
-    { "id": 57, "name": "Quartz Reef Bendigo Estate Pinot Noir 18 (Central Otago)", "price": 145 },
-    { "id": 58, "name": "Dominio De Heredia Rioja 15 (Spain)", "price": 14 },
-    { "id": 59, "name": "Craggy Te Kahu Merlot/Cabernet 15 (Hawke’s Bay)", "price": 16 },
-    { "id": 60, "name": "Delegats Reserve Merlot 16 (Hawke’s Bay)", "price": 12 },
-    { "id": 61, "name": "Squawking Magpie The Chatterer Syrah 20", "price": 15.5 },
-    { "id": 62, "name": "Coriole Redstone Shiraz 16 (Australia)", "price": 14 },
-    { "id": 63, "name": "La Valentina Montepulciano Spelt 2013 (Italy)", "price": 99 }],
+   { "id": 35, "name": "Nino Franco Prosecco NV (Italy) - Glass", "price": 17 },
+{ "id": 36, "name": "Nino Franco Prosecco NV (Italy) - Bottle", "price": 82 },
+
+{ "id": 37, "name": "Quartz Reef Brut NV (Central Otago) - Bottle", "price": 98 },
+
+{ "id": 38, "name": "Taittinger Brut Reserve NV (France) - Bottle", "price": 284 },
+
+{ "id": 39, "name": "Gerard Bertrand 6eme Sens - Glass", "price": 14.5 },
+{ "id": 40, "name": "Gerard Bertrand 6eme Sens - Bottle", "price": 68 },
+
+{ "id": 41, "name": "Soho Westwood Rose (Waiheke) - Glass", "price": 15 },
+{ "id": 42, "name": "Soho Westwood Rose (Waiheke) - Bottle", "price": 72 },
+
+{ "id": 43, "name": "SOHO ‘Stella’ Sauvignon Blanc 17 (Marlborough) - Bottle", "price": 65 },
+
+{ "id": 44, "name": "Spy Valley Sauvignon Blanc 19 (Marlborough) - Glass", "price": 12.5 },
+{ "id": 45, "name": "Spy Valley Sauvignon Blanc 19 (Marlborough) - Bottle", "price": 60 },
+
+{ "id": 46, "name": "Astrolabe Sauvignon Blanc 17 (Marlborough) - Glass", "price": 16.5 },
+{ "id": 47, "name": "Astrolabe Sauvignon Blanc 17 (Marlborough) - Bottle", "price": 80 },
+
+{ "id": 48, "name": "Leeuwin Art Series Riesling Margaret River 21 - Glass", "price": 15.5 },
+
+{ "id": 49, "name": "Framingham Classic Riesling 21 - Glass", "price": 14.5 },
+
+{ "id": 50, "name": "Riff Pinot Grigio 16 (Italy) - Glass", "price": 13.5 },
+
+{ "id": 51, "name": "SOHO ‘Jagger’ Pinot Gris 17 (Marlborough) - Glass", "price": 14.5 },
+
+{ "id": 52, "name": "Tony Bish Fat n Sassy Chardonnay 20 - Glass", "price": 14.5 },
+
+{ "id": 53, "name": "Astrolabe Chardonnay 18 (Marlborough) - Glass", "price": 17.5 },
+
+{ "id": 54, "name": "Craggy Range Gimblett Gravels Chardonnay 21 - Bottle", "price": 99 },
+
+{ "id": 55, "name": "Durvillea Marlborough Pinot Noir 20 - Glass", "price": 14.5 },
+
+{ "id": 56, "name": "Summer House Pinot Noir 17 (Central Otago) - Glass", "price": 15 },
+{ "id": 57, "name": "Summer House Pinot Noir 17 (Central Otago) - Bottle", "price": 72 },
+
+{ "id": 58, "name": "Quartz Reef Bendigo Estate Pinot Noir 18 (Central Otago) - Bottle", "price": 145 },
+
+{ "id": 59, "name": "Dominio De Heredia Rioja 15 (Spain) - Glass", "price": 14 },
+{ "id": 60, "name": "Dominio De Heredia Rioja 15 (Spain) - Bottle", "price": 65 },
+
+{ "id": 61, "name": "Craggy Te Kahu Merlot/Cabernet 15 (Hawke’s Bay) - Glass", "price": 16 },
+{ "id": 62, "name": "Craggy Te Kahu Merlot/Cabernet 15 (Hawke’s Bay) - Bottle", "price": 79 },
+
+{ "id": 63, "name": "Delegats Reserve Merlot 16 (Hawke’s Bay) - Glass", "price": 12 },
+{ "id": 64, "name": "Delegats Reserve Merlot 16 (Hawke’s Bay) - Bottle", "price": 56 },
+
+{ "id": 65, "name": "Squawking Magpie The Chatterer Syrah 20 - Glass", "price": 15.5 },
+{ "id": 66, "name": "Squawking Magpie The Chatterer Syrah 20 - Bottle", "price": 75 },
+
+{ "id": 67, "name": "Coriole Redstone Shiraz 16 (Australia) - Glass", "price": 14 },
+{ "id": 68, "name": "Coriole Redstone Shiraz 16 (Australia) - Bottle", "price": 65 },
+
+{ "id": 69, "name": "La Valentina Montepulciano Spelt 2013 (Italy) - Bottle", "price": 99 },
+{ "id": 70, "name": "Saigon Special", "price": 12 },
+{ "id": 71, "name": "Corona", "price": 12 },
+{ "id": 72, "name": "Heineken", "price": 12 },
+{ "id": 73, "name": "Asahi", "price": 12 },
+{ "id": 74, "name": "Hallertau #2 Pale Ale", "price": 12 },
+{ "id": 75, "name": "Hallertau #5 Pilsner", "price": 12 },
+{ "id": 76, "name": "Little Creatures Pale Ale", "price": 12 },
+{ "id": 77, "name": "Steinlager Lite", "price": 12 },
+{ "id": 78, "name": "Macs Isaac’s Apple Cider", "price": 12 },
+
+{ "id": 79, "name": "Tiger Beer 5.2% (On Tap)", "price": 12 },
+{ "id": 80, "name": "Sawmill Hazy Pale Ale 5% (On Tap)", "price": 12 },
+{ "id": 81, "name": "McLeod’s Paradise Pale Ale 5.8% (On Tap)", "price": 12 },
+{ "id": 82, "name": "McLeod’s Longboarder Lager 5% (On Tap)", "price": 12 }
+
+  ],
     "Add_More":[
       {"id": 100, "name": "Add custom item", "price": 0}
 
